@@ -1,0 +1,98 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>uk.co.screamingfrog</groupId>
+  <artifactId>AppleJavaExtensions</artifactId>
+  <packaging>jar</packaging>
+  <version>1.6</version>
+  <name>AppleJavaExtensions</name>
+  <url>http://maven.apache.org</url>
+
+  <!-- 
+       Code is version 1.6 jar from here: 
+       https://developer.apple.com/legacy/library/samplecode/AppleJavaExtensions/Introduction/Intro.html
+       Its been decompiled using JD GUI, has serialVersionId added to a few classes to remove compilation errors and thats it.
+  -->
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  
+  <build>
+    
+    <pluginManagement>
+      <plugins>
+        
+        <!--This plugin's configuration is used to store Eclipse m2e settings 
+            only. It has no influence on the Maven build itself. -->
+        <plugin>
+          <groupId>org.eclipse.m2e</groupId>
+          <artifactId>lifecycle-mapping</artifactId>
+          <version>1.0.0</version>
+          <configuration>
+            <lifecycleMappingMetadata>
+              <pluginExecutions>
+
+                <pluginExecution>
+                  <pluginExecutionFilter>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-toolchains-plugin</artifactId>
+                    <versionRange>[0.0.0,)</versionRange>
+                    <goals>
+                      <goal>toolchain</goal>
+                    </goals>
+                  </pluginExecutionFilter>
+                  <action>
+                    <ignore/>
+                  </action>
+                </pluginExecution>
+
+              </pluginExecutions>
+            </lifecycleMappingMetadata>
+          </configuration>
+        </plugin>
+        
+      </plugins>
+    </pluginManagement>
+    
+    <plugins>
+
+      <!-- Compile with Java 8 -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-toolchains-plugin</artifactId>
+        <version>1.0</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>toolchain</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <toolchains>
+            <jdk>
+              <version>1.8</version>
+              <vendor>sun</vendor>
+            </jdk>
+          </toolchains>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>2.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+
+    </plugins>
+
+  </build>
+
+</project>
