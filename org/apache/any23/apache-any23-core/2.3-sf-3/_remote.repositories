@@ -1,0 +1,5 @@
+#NOTE: This is an Aether internal implementation file, its format can be changed without prior notice.
+#Wed Jan 22 08:40:47 GMT 2020
+apache-any23-core-2.3-sf-3.jar>=
+apache-any23-core-2.3-sf-3.pom>=
+apache-any23-core-2.3-sf-3-tests.jar>=
