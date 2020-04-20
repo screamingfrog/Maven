@@ -1,0 +1,10 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Mon Apr 20 10:43:04 BST 2020
+https\://github.com/screamingfrog/Maven/raw/master/.error=
+http\://10.0.0.10\:8082/.error=
+https\://repo.maven.apache.org/maven2/.lastUpdated=1587375784964
+http\://maven.teamdev.com/repository/products/.error=
+http\://maven.teamdev.com/repository/products/.lastUpdated=1587375784087
+https\://github.com/screamingfrog/Maven/raw/master/.lastUpdated=1587375784574
+http\://10.0.0.10\:8082/.lastUpdated=1587375784617
+https\://repo.maven.apache.org/maven2/.error=
